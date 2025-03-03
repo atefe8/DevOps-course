@@ -12,8 +12,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "vm2" do |vm2|
     vm2.vm.box="ubuntu/bionic64"
-    vm2.vm.network "private_network", ip:"192.168.56.104"
-    vm2.vm.network "forwarded_port", guest:20, host:8081
+    vm2.vm.network "private_network", ip:"192.168.56.110"
+    vm2.vm.network "forwarded_port", guest:22, host:8081
     vm2.vm.provider "virtualbox" do |vb|
       vb.memory="1024"
       vb.cpus=2
